@@ -1,7 +1,22 @@
-import { fetchData } from "./api.js";
+import { searchPokemon } from "./api.js";
 import { getImages } from "./dom.js";
 
+window.onload = function() {
+    promptName();
+};
 
+function promptName() {
+    // Prompt user for their first name
+    const firstName = prompt("Please enter your first name:");
+
+    if (firstName) {
+        // Update the h1 element with the welcome message
+        const welcomeMessage = `Welcome, ${firstName}!`;
+        document.querySelector('h1').textContent = welcomeMessage;
+    } else {
+        alert("You did not enter a name. Please try again.");
+    }
+}
 
 
 // Function to display Pokémon data
