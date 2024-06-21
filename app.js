@@ -1,7 +1,3 @@
-import { searchPokemon } from "./api.js";
-import { getImages } from "./dom.js";
-
-
 window.onload = function() {
     promptName();
 };
@@ -87,4 +83,3 @@ function displayPokemonData(pokemon) {
         <p><strong>Abilities:</strong> ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
     `;
 }
-
