@@ -2,8 +2,26 @@ import { fetchData } from "./api.js";
 import { getImages } from "./dom.js";
 
 
-const data = fetchData()
-const images = getImages()
+
+
+// Function to display Pokémon data
+function displayPokemonData(pokemon) {
+    pokemonData.innerHTML = `
+        <p><strong>Name:</strong> ${pokemon.name}</p>
+        <p><strong>Height:</strong> ${pokemon.height}</p>
+        <p><strong>Weight:</strong> ${pokemon.weight}</p>
+        <p><strong>Abilities:</strong> ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
+        <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+    `;
+}
+
+// Event listener for search button click
+searchButton.addEventListener('click', searchPokemon);
+
+
+
+
+
 
 
 
@@ -27,3 +45,8 @@ const images = getImages()
     // catch(error){
     //     console.error(error);
     // }
+
+
+const myPromise = new Promise((resolve, reject) => {
+    
+})
