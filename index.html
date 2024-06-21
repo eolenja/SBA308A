@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pokémon Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>PokeFacts</h1>
+    <p>
+   <div id="welcome">
+        <h1>Welcome!</h1>
+    </div></p>
 
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
-    <button onclick="fetchNames()">Fetch Pokemon</button><br>
-    
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none">
-    
+
+
+    <div class="container">
+        <h1>Pokémon Search</h1>
+        <div class="search-container">
+            <input type="text" id="pokemonInput" placeholder="Enter Pokémon name or ID">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="pokemonData"></div>
+    </div>
+
+    <div class="container">
+        <h1>Random Pokémon Generator</h1>
+        <button onclick="getRandomPokemon()">Get Random Pokémon</button>
+        <div id="pokemonData">
+            <p>Click the button to generate a random Pokémon!</p>
+        </div>
+    </div>
+
+
+   
     <script src="main.js" type="module"></script>
 
     
